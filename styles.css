@@ -1,0 +1,100 @@
+/* Navigointipalkin tyyli */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333; /* Tummanharmaa taustaväri */
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Asettaa listan elementit vierekkäin */
+  justify-content: center; /* Keskittää elementit vaakasuunnassa */
+  align-items: center; /* Keskittää elementit pystysuunnassa */
+  width: 100%; /* Asettaa listan leveydeksi koko navigointipalkin leveyden */
+}
+
+nav ul li {
+  display: inline-block; /* Vaihtoehtoisesti voit käyttää 'flex' */
+}
+
+/* Linkkien tyyli */
+nav ul li a {
+  display: block;
+  color: white; /* Valkoinen tekstiväri */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Linkkien hover-efekti */
+nav ul li a:hover {
+  background-color: #111; /* Tummempi harmaa taustaväri hover-tilassa */
+}
+
+.ekakuva {
+  position: relative;
+  background-image: url("kuvat/golf-simulaattori.jpg"); /* Muuta polku vastaamaan kuvatiedostosi sijaintia */
+  background-size: cover; /* Asettaa kuvan peittämään koko taustan */
+  background-position: center; /* Keskittää kuvan */
+  height: 500px;
+}
+
+.henkilo-container {
+  display: flex; /* Asettaa flexbox-asettelun */
+  justify-content: space-between; /* Asettaa sisällön tasaisesti jakautuneena */
+  align-items: center; /* Keskittää elementit pystysuunnassa */
+}
+
+.henkilo-esittely {
+  flex-basis: 48%; /* Asettaa kunkin henkilöesittelyn leveydeksi noin puolet vanhemman kontin leveydestä */
+  display: flex; /* Käyttää flexbox-asettelua */
+  flex-direction: column; /* Asettaa elementit pystysuuntaan */
+  align-items: center; /* Keskittää elementit vaakasuunnassa */
+}
+
+.henkilo-esittely img {
+  width: 200px; /* Asettaa kuvan leveyden */
+  height: auto;
+  border-radius: 10%; /* Pyöristää kuvan kulmat luoden ympyränmuotoisen kuvan */
+  object-fit: cover;
+  margin-bottom: 10px; /* Lisää marginaalia kuvan ja tekstin väliin */
+}
+
+.esittely-teksti {
+  text-align: center; /* Keskittää tekstin */
+  max-width: 80%; /* Asettaa tekstilaatikon maksimileveyden */
+}
+
+#meista {
+  background-color: rgb(211, 211, 211); /* Vaaleanharmaa */
+  padding: 20px; /* Lisää hieman tyhjää tilaa osion sisällön ympärille */
+}
+
+#meista h2 {
+  text-align: center;
+}
+
+body,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo {
+  position: absolute; /* Sijoitetaan absoluuttisesti suhteessa sen vanhempaan */
+  top: 50px; /* Sijoittaa logon 10px päähän yläreunasta */
+  left: 5px; /* Sijoittaa logon 10px päähän vasemmasta reunasta */
+  width: 200px; /* Määritä logon leveys */
+  /* Säädä tarvittaessa */
+}
