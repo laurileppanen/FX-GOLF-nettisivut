@@ -7,7 +7,14 @@ nav {
   z-index: 10;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* Tämä keskittää linkit */
+  flex-grow: 1; /* Varmistetaan, että tämä elementti täyttää käytettävissä olevan tilan */
 }
 
 nav ul {
@@ -17,11 +24,10 @@ nav ul {
   display: flex; /* Asettaa listan elementit vierekkäin */
   justify-content: center; /* Keskittää elementit vaakasuunnassa */
   align-items: center; /* Keskittää elementit pystysuunnassa */
-  width: 100%; /* Asettaa listan leveydeksi koko navigointipalkin leveyden */
 }
 
 nav ul li {
-  display: inline-block; /* Vaihtoehtoisesti voit käyttää 'flex' */
+  display: inline-block;
 }
 
 /* Linkkien tyyli */
@@ -38,12 +44,57 @@ nav ul li a:hover {
   background-color: #111; /* Tummempi harmaa taustaväri hover-tilassa */
 }
 
+.social-media-links {
+  margin-left: auto; /* Työntää sosiaalisen median linkit oikeaan reunaan */
+  margin-right: 20px; /* Lisää 20 pikselin väli oikeaan reunaan */
+  display: flex;
+  align-items: center;
+}
+
+.social-media-links a img {
+  width: 30px; /* Säädä logojen kokoa */
+  margin-left: 10px; /* Lisää väliä logojen välille */
+}
+
 .ekakuva {
   position: relative;
-  background-image: url("kuvat/golf-simulaattori.jpg"); /* Muuta polku vastaamaan kuvatiedostosi sijaintia */
+  background-image: url("kuvat/golf-simulaattori.jpg");
   background-size: cover; /* Asettaa kuvan peittämään koko taustan */
   background-position: center; /* Keskittää kuvan */
   height: 500px;
+  display: flex;
+  justify-content: center; /* Keskittää lapsielementit vaakasuunnassa */
+  align-items: center; /* Keskittää lapsielementit pystysuunnassa */
+  height: 500px; /* Säädä korkeutta */
+}
+
+.logo {
+  position: absolute; /* Sijoittaa absoluuttisesti suhteessa sen vanhempaan */
+  top: 300px; /* Sijoittaa logon 300px päähän yläreunasta */
+  left: 0px; /* Sijoittaa logon 0px päähän vasemmasta reunasta */
+  width: 200px; /* Määritä logon leveys */
+  border-radius: 50%;
+}
+
+.varaa-aika-btn {
+  display: inline-block;
+  visibility: visible;
+  position: absolute; /* Sijoitetaan absoluuttisesti .ekakuva-kontin sisälle */
+  top: 70%; /* Sijoittaa elementin alemmas vanhempansa korkeuden suhteen */
+  left: 50%; /* Sijoittaa elementin keskelle vanhempansa leveyden suhteen */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Siirtää elementtiä taaksepäin sen omien mittojen perusteella */
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer; /* Muuttaa kursorin muodon osoittamaan, että nappia voi klikata */
+  font-family: "Arial", sans-serif;
+  font-weight: bold; /* Lisää fontin paksuutta */
+  color: #ffffff; /* Valkoinen teksti */
+  background-color: #333333; /* Vaaleanmusta taustaväri */
+  border: none; /* Poistaa reunaviivan */
+  border-radius: 20px; /* Pyöristetyt reunat */
 }
 
 .henkilo-container {
@@ -54,7 +105,7 @@ nav ul li a:hover {
 
 .henkilo-esittely {
   flex-basis: 48%; /* Asettaa kunkin henkilöesittelyn leveydeksi noin puolet vanhemman kontin leveydestä */
-  display: flex; /* Käyttää flexbox-asettelua */
+  display: flex;
   flex-direction: column; /* Asettaa elementit pystysuuntaan */
   align-items: center; /* Keskittää elementit vaakasuunnassa */
 }
@@ -74,7 +125,7 @@ nav ul li a:hover {
 
 #meista {
   background-color: rgb(211, 211, 211); /* Vaaleanharmaa */
-  padding: 20px; /* Lisää hieman tyhjää tilaa osion sisällön ympärille */
+  padding: 20px;
 }
 
 #meista h2 {
@@ -88,13 +139,46 @@ section {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* scrollaus likattaessa yläpalkkia */
 }
 
-.logo {
-  position: absolute; /* Sijoitetaan absoluuttisesti suhteessa sen vanhempaan */
-  top: 50px; /* Sijoittaa logon 10px päähän yläreunasta */
-  left: 5px; /* Sijoittaa logon 10px päähän vasemmasta reunasta */
-  width: 200px; /* Määritä logon leveys */
-  /* Säädä tarvittaessa */
+#hinnasto h2 {
+  text-align: center;
+}
+
+#hinnasto table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+#hinnasto th,
+#hinnasto td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#hinnasto tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#hinnasto th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #333;
+  color: white;
+}
+
+#hinnasto {
+  margin-bottom: 50px;
+}
+
+#saapuminen h2 {
+  text-align: center;
+}
+
+#yhteystiedot h2 {
+  text-align: center;
 }
