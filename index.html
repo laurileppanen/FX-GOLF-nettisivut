@@ -16,8 +16,11 @@
             <li><a href="#">Etusivu</a></li>
             <li><a href="#hinnasto">Hinnasto</a></li>
             <li><a href="#saapuminen">Saapuminen</a></li>
-            <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+            <li>
+              <a href="yhteystiedot.html" target="_blank">Yhteystiedot</a>
+            </li>
             <li><a href="#meista">Meistä</a></li>
+            <li><a href="fx-club.html" target="_blank">FX-club</a></li>
           </ul>
         </div>
         <div class="social-media-links">
@@ -37,7 +40,7 @@
       </nav>
     </section>
 
-    <section id="hinnasto">
+    <section id="hinnasto" class="blurry">
       <h2>Hinnasto</h2>
       <table>
         <tr>
@@ -59,17 +62,12 @@
       </table>
     </section>
 
-    <section id="yhteystiedot">
-      <h2>Yhteystiedot</h2>
-      <p>testi</p>
-    </section>
-
     <section id="saapuminen">
       <h2>Saapuminen</h2>
       <p>testi2</p>
     </section>
 
-    <section id="meista">
+    <section id="meista" class="blurry">
       <h2>Meistä</h2>
       <div class="henkilo-container">
         <div class="henkilo-esittely">
@@ -90,5 +88,36 @@
         </div>
       </div>
     </section>
+
+    <footer class="sivuston-footer">
+      <div class="footer-sisalto">
+        <p>Yritys: Pijarion Oy</p>
+        <p>Y-tunnus: 3424377-2</p>
+        <p>Osoite: Ollinkatu 9B 5, 33400 Tampere</p>
+        <p>Puhelin: 040 759 7270</p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".blurry"); // Valitse kaikki sumennettavat elementit
+
+        function checkVisibility() {
+          const windowHeight = window.innerHeight; // Ikkunan korkeus
+
+          elements.forEach((el) => {
+            const elementTop = el.getBoundingClientRect().top; // Elementin sijainti suhteessa näkymän yläreunaan
+
+            // Jos elementti on näkyvissä (ikkunan sisällä), lisää 'in-focus' luokka
+            if (elementTop < windowHeight) {
+              el.classList.add("in-focus");
+            }
+          });
+        }
+
+        // Tarkista elementtien näkyvyys aluksi ja skrollatessa
+        checkVisibility();
+        window.addEventListener("scroll", checkVisibility);
+      });
+    </script>
   </body>
 </html>
