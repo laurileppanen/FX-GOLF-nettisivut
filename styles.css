@@ -1,8 +1,9 @@
 /* Navigointipalkin tyyli */
 nav {
-  position: fixed;
+  position: fixed; /*Palkki näkyy koko ajan */
   top: 0;
   width: 100%;
+  height: 60px;
   background-color: #333; /* Tummanharmaa taustaväri */
   z-index: 10;
   overflow: hidden;
@@ -56,45 +57,24 @@ nav ul li a:hover {
   margin-left: 10px; /* Lisää väliä logojen välille */
 }
 
-.ekakuva {
-  position: relative;
-  background-image: url("kuvat/golf-simulaattori.jpg");
-  background-size: cover; /* Asettaa kuvan peittämään koko taustan */
-  background-position: center; /* Keskittää kuvan */
-  height: 500px;
+.etusivu {
+  background-image: url("kuvat/etusivu.png");
+  background-size: cover;
+  height: 600px;
+  padding-top: 60px;
   display: flex;
-  justify-content: center; /* Keskittää lapsielementit vaakasuunnassa */
-  align-items: center; /* Keskittää lapsielementit pystysuunnassa */
-  height: 500px; /* Säädä korkeutta */
+  justify-content: center;
+  align-items: baseline;
 }
 
-.logo {
-  position: absolute; /* Sijoittaa absoluuttisesti suhteessa sen vanhempaan */
-  top: 300px; /* Sijoittaa logon 300px päähän yläreunasta */
-  left: 0px; /* Sijoittaa logon 0px päähän vasemmasta reunasta */
-  width: 200px; /* Määritä logon leveys */
-  border-radius: 50%;
-}
-
-.varaa-aika-btn {
-  display: inline-block;
-  visibility: visible;
-  position: absolute; /* Sijoitetaan absoluuttisesti .ekakuva-kontin sisälle */
-  top: 70%; /* Sijoittaa elementin alemmas vanhempansa korkeuden suhteen */
-  left: 50%; /* Sijoittaa elementin keskelle vanhempansa leveyden suhteen */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Siirtää elementtiä taaksepäin sen omien mittojen perusteella */
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer; /* Muuttaa kursorin muodon osoittamaan, että nappia voi klikata */
-  font-family: "Arial", sans-serif;
-  font-weight: bold; /* Lisää fontin paksuutta */
-  color: #ffffff; /* Valkoinen teksti */
-  background-color: #333333; /* Vaaleanmusta taustaväri */
-  border: none; /* Poistaa reunaviivan */
-  border-radius: 20px; /* Pyöristetyt reunat */
+.painike {
+  background-color: #ce8104;
+  color: #fff;
+  font-size: xx-large;
+  margin-top: 450px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .henkilo-container {
@@ -136,72 +116,185 @@ body,
 section {
   margin: 0;
   padding: 0;
+  width: fit-content;
 }
 
 html {
   scroll-behavior: smooth; /* scrollaus likattaessa yläpalkkia */
 }
 
-#hinnasto h2 {
+.ylempinosto {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ada1a1;
+}
+
+.ylempinostokuva {
+  width: 50%;
+}
+
+.ylempinostoimg {
+  width: 500px;
+  padding: 30px;
+}
+
+.ylempinostoboxi {
+  text-align: center;
+  width: 50%;
+}
+
+.ylempinostoboxi p {
+  padding-top: 100px;
+  padding-right: 20px;
+}
+
+.nostoboxit {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c2a2a;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nostoboxi {
+  border: 2px solid #333;
+  background-color: bisque;
+  color: black;
+  margin: 10px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 50px;
+  overflow-wrap: break-word;
   text-align: center;
 }
 
-#hinnasto table {
+.painike2 {
+  background-color: #ce8104;
+  color: #fff;
+  font-size: large;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.etusivusimulaattori {
+  background-color: dimgrey;
+  display: flex;
+}
+
+.etusivusimulaattori2 {
+  width: 50%;
+  padding: 20px;
+}
+
+.etusivusimulaattori2 img {
+  width: 400px;
+  padding-left: 40px;
+}
+
+.etusivusimulaattori3 {
+  width: 50%;
+}
+
+.etusivusimulaattori3 p {
+  padding-top: 50px;
+  padding-left: 40px;
+}
+
+#hinnasto {
+  background-color: #ada1a1;
+  padding-bottom: 10px;
+  padding-top: 0.5px;
+}
+
+#hinnasto h2 {
+  padding-top: 10px;
+  text-align: center;
+}
+
+#hinnasto1 table {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   border-collapse: collapse;
 }
 
-#hinnasto th,
-#hinnasto td {
-  border: 1px solid #ddd;
+#hinnasto1 th,
+#hinnasto1 td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  color: black;
+  background-color: #ada1a1;
+}
+
+#hinnasto2 {
+  padding-bottom: 10px;
+}
+
+#hinnasto2 table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+#hinnasto2 th,
+#hinnasto2 td {
+  border: 1px solid #2c2a2a;
   padding: 8px;
   text-align: left;
 }
 
-#hinnasto tr:nth-child(even) {
-  background-color: #f2f2f2;
+#hinnasto3 {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-#hinnasto th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: #333;
-  color: white;
-}
-
-#hinnasto {
-  margin-bottom: 50px;
+#saapuminen {
+  margin-bottom: 10px;
 }
 
 #saapuminen h2 {
   text-align: center;
 }
 
+#saapuminen2 {
+  display: flex;
+  justify-content: center;
+}
+
 #yhteystiedot h2 {
   text-align: center;
 }
 
-.sivuston-footer {
-  background-color: #000;
-  color: #fff;
+#banneri {
+  background-color: black;
+  color: white;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#kuvabanneri {
+  width: 30%;
+  padding: 20px;
+}
+
+#imgbannerivasen {
+  width: 300px;
+  padding-top: 45px;
+}
+
+#imgbannerioikea {
+  width: 300px;
+  padding-top: 60px;
+  padding-right: 30px;
+}
+
+#tekstibanneri {
   text-align: center;
   padding: 20px 0;
-  font-size: 16px;
-}
-
-.footer-sisalton p {
-  margin: 10px 0; /* Väliä tekstien välille */
-}
-
-/* Alkuperäinen sumennettu tyyli */
-.blurry {
-  filter: blur(5px);
-  transition: filter 0.5s ease-out;
-}
-
-/* Tarkentunut tyyli, kun elementti on skrollattu näkyviin */
-.in-focus {
-  filter: blur(0);
+  width: 40%;
 }
