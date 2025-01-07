@@ -1,3 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /* Navigointipalkin tyyli */
 nav {
   position: fixed; /*Palkki näkyy koko ajan */
@@ -54,118 +63,267 @@ nav ul li a:hover {
 
 .social-media-links a img {
   width: 30px; /* Säädä logojen kokoa */
+  height: 30px;
+  margin-left: 10px; /* Lisää väliä logojen välille */
+}
+
+.hamburger-menu {
+  display: none; /* Piilotetaan oletusarvoisesti */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px; /* Hampurilaisvalikon korkeus */
+  width: 35px; /* Hampurilaisvalikon leveys */
+  align-items: center;
+}
+
+.hamburger-menu div {
+  background-color: white; /* Viivojen väri */
+  height: 3px; /* Viivojen korkeus */
+  width: 100%; /* Viivojen leveys */
+  margin: 2px 0; /* Viivojen väli */
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Näytetään hampurilaisvalikko */
+    padding-left: 10px;
+  }
+
+  .nav-links {
+    display: none; /* Piilota muut navigointilinkit */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: baseline;
+    padding-top: 240px;
+  }
+
+  nav ul li {
+    display: block;
+  }
+}
+
+/* Muut tyylit, kuten olet jo määritellyt */
+nav ul li a {
+  display: block;
+  color: white; /* Valkoinen tekstiväri */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111; /* Tummempi harmaa taustaväri hover-tilassa */
+}
+
+.social-media-links {
+  margin-left: auto; /* Työntää sosiaalisen median linkit oikeaan reunaan */
+  margin-right: 20px; /* Lisää 20 pikselin väli oikeaan reunaan */
+  display: flex;
+  align-items: center;
+}
+
+.social-media-links a img {
+  width: 30px; /* Säädä logojen kokoa */
   margin-left: 10px; /* Lisää väliä logojen välille */
 }
 
 .etusivu {
-  background-image: url("kuvat/etusivu.png");
+  background-image: url("kuvat/etusivu2.jpeg");
   background-size: cover;
   height: 600px;
+  width: 100%;
   padding-top: 60px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
+}
+
+#poweredby {
+  width: 100%;
+  display: flex;
+    justify-content: center;
+    padding-bottom: 7%;
+}
+
+#poweredby img {
+  width: 30%;
+}
+
+.etusivulogo {
+  width: 75%;
+}
+
+@media (max-width: 768px) {
+  .etusivulogo {
+    width: 95%;
+  }
 }
 
 .painike {
   background-color: #ce8104;
   color: #fff;
   font-size: xx-large;
-  margin-top: 450px;
+  margin-top: 40px;
   padding: 5px 20px;
   border-radius: 5px;
   text-decoration: none;
 }
 
-.henkilo-container {
-  display: flex; /* Asettaa flexbox-asettelun */
-  justify-content: space-between; /* Asettaa sisällön tasaisesti jakautuneena */
-  align-items: center; /* Keskittää elementit pystysuunnassa */
-}
-
-.henkilo-esittely {
-  flex-basis: 48%; /* Asettaa kunkin henkilöesittelyn leveydeksi noin puolet vanhemman kontin leveydestä */
-  display: flex;
-  flex-direction: column; /* Asettaa elementit pystysuuntaan */
-  align-items: center; /* Keskittää elementit vaakasuunnassa */
-}
-
-.henkilo-esittely img {
-  width: 200px; /* Asettaa kuvan leveyden */
-  height: auto;
-  border-radius: 10%; /* Pyöristää kuvan kulmat luoden ympyränmuotoisen kuvan */
-  object-fit: cover;
-  margin-bottom: 10px; /* Lisää marginaalia kuvan ja tekstin väliin */
-}
-
-.esittely-teksti {
-  text-align: center; /* Keskittää tekstin */
-  max-width: 80%; /* Asettaa tekstilaatikon maksimileveyden */
-}
-
-#meista {
-  background-color: rgb(211, 211, 211); /* Vaaleanharmaa */
-  padding: 20px;
-}
-
-#meista h2 {
-  text-align: center;
-}
-
-body,
-section {
-  margin: 0;
-  padding: 0;
-  width: fit-content;
+@media (max-width: 768px) {
+  .etusivu {
+    padding-top: 20px; /* Pienempi padding yläosaan */
+    background-size: cover;
+    background-position: center center; /* Varmistetaan, että kuva keskittyy oikein */
+    width: 100%;
+  }
 }
 
 html {
   scroll-behavior: smooth; /* scrollaus likattaessa yläpalkkia */
 }
 
+.tausta {
+  background-color: #212121;
+}
+
 .ylempinosto {
   display: flex;
   justify-content: space-between;
-  background-color: #ada1a1;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .ylempinosto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .ylempinostokuva {
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  .ylempinostokuva {
+    width: 100%;
+  }
+}
+
 .ylempinostoimg {
-  width: 500px;
-  padding: 30px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ylempinostoimg {
+    width: 100%;
+  }
 }
 
 .ylempinostoboxi {
   text-align: center;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 2%;
+}
+
+@media (max-width: 768px) {
+  .ylempinostoboxi {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 10%;
+  }
+}
+
+.ylempinostoboxi h4 {
+  color: white;
+  text-align: left;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  font-size: 2.8vw;
+  font-family: "Georgia", serif;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .ylempinostoboxi h4 {
+    font-size: 6vw;
+    text-align: center;
+  }
 }
 
 .ylempinostoboxi p {
-  padding-top: 100px;
-  padding-right: 20px;
+  padding-top: 0%;
+  color: white;
+  font-family: "Arial", sans-serif;
+  text-align: left;
+  font-size: 1.7vw;
+}
+
+@media (max-width: 768px) {
+  .ylempinostoboxi p {
+    padding-top: 0%;
+    font-size: 4vw;
+    padding-left: 4%;
+    padding-right: 4%;
+    text-align: center;
+  }
 }
 
 .nostoboxit {
   display: flex;
   justify-content: space-between;
-  background-color: #2c2a2a;
-  padding-top: 30px;
-  padding-bottom: 30px;
+
+  padding-top: 5%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+@media (max-width: 768px) {
+  .nostoboxit {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+  }
 }
 
 .nostoboxi {
   border: 2px solid #333;
-  background-color: bisque;
+  background-color: #cdb423;
   color: black;
-  margin: 10px;
-  width: 300px;
-  padding: 20px;
-  border-radius: 50px;
-  overflow-wrap: break-word;
+  margin: 1%;
+  width: 33%;
+  padding: 2%;
+  border-radius: 15%;
   text-align: center;
+}
+
+.nostoboxi h3 {
+  font-family: "Georgia", serif;
+}
+
+.nostoboxi p {
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .nostoboxi {
+    width: 100%;
+  }
 }
 
 .painike2 {
@@ -178,123 +336,517 @@ html {
 }
 
 .etusivusimulaattori {
-  background-color: dimgrey;
   display: flex;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .etusivusimulaattori {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0%;
+  }
 }
 
 .etusivusimulaattori2 {
   width: 50%;
-  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .etusivusimulaattori2 {
+    width: 100%;
+  }
 }
 
 .etusivusimulaattori2 img {
-  width: 400px;
-  padding-left: 40px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .etusivusimulaattori2 img {
+    width: 100%;
+    padding-top: 5%;
+  }
 }
 
 .etusivusimulaattori3 {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .etusivusimulaattori3 {
+    width: 100%;
+  }
 }
 
 .etusivusimulaattori3 p {
-  padding-top: 50px;
-  padding-left: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 150%;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .etusivusimulaattori3 p {
+    padding-top: 0%;
+    text-align: center;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+#hinnastojakortit {
+  display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  #hinnastojakortit {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 #hinnasto {
-  background-color: #ada1a1;
-  padding-bottom: 10px;
-  padding-top: 0.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+  width: 50%;
+  padding-right: 1%;
+}
+
+@media (max-width: 768px) {
+  #hinnasto {
+    width: 100%;
+  }
 }
 
 #hinnasto h2 {
-  padding-top: 10px;
   text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-family: "Georgia", serif;
 }
 
-#hinnasto1 table {
+#hinnasto img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #hinnasto img {
+    width: 100%;
+  }
+}
+
+#kertakortit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
+  padding-left: 1%;
 }
 
-#hinnasto1 th,
-#hinnasto1 td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
+@media (max-width: 768px) {
+  #kertakortit {
+    width: 100%;
+  }
+}
+
+#kertakortit h2 {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-family: "Georgia", serif;
+}
+
+#kertakortit img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #kertakortit img {
+    width: 100%;
+  }
+}
+
+
+
+.opiskelijat {
+  color: white;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding-top: 1%;
+}
+
+@media (max-width: 768px) {
+  .opiskelijat {
+    padding-top: 3%;
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+}
+
+.jasenyys {
+  padding-top: 5%;
+}
+
+.jasenyys h2 {
+  text-align: center;
+    color: white;
+    font-size: xx-large;
+    font-family: "Georgia", serif;
+}
+
+.jasenyys p {
+  color: white;
+    margin-left: 5%;
+    margin-right: 3%;
+    font-family: "Arial", sans-serif;
+    font-size: 1.7vw;
+}
+
+@media (max-width: 768px) {
+  .jasenyys p {
+    font-size: 4.0vw;
+  }
+}
+
+.jasenyys img {
+  width: 100%;
+}
+
+#vuoronvaraus {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+  #vuoronvaraus {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.vuoro {
+  padding-left: 3%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .vuoro {
+    width: 100%;
+    padding-left: 0%;
+  }
+}
+
+.vuoro h3 {
+  color: white;
+  font-size: xx-large;
+  padding-left: 1%;
+  margin-bottom: 1%;
+  font-family: "Georgia", serif;
+}
+
+@media (max-width: 768px) {
+  .vuoro h3 {
+    text-align: center;
+  }
+}
+
+.vuoro p {
+  margin-left: 1%;
+  color: white;
+  margin-right: 10%;
+  font-family: "Arial", sans-serif;
+  font-size: 1.7vw;
+}
+
+@media (max-width: 768px) {
+  .vuoro p {
+    margin-right: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 4vw;
+  }
+}
+
+#vuoro2 {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #vuoro2 {
+    width: 100%;
+    padding-top: 5%;
+  }
+}
+
+#vuoro2 img {
+  width: 66%;
+  height: 85%;
+  transform: scaleX(1.5);
+}
+
+@media (max-width: 768px) {
+  #vuoro2 img {
+    width: 100%;
+    height: auto;
+    transform: scaleX(1);
+  }
+}
+
+.painige {
+  position: absolute;
+  background-color: white;
   color: black;
-  background-color: #ada1a1;
-}
-
-#hinnasto2 {
-  padding-bottom: 10px;
-}
-
-#hinnasto2 table {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-}
-
-#hinnasto2 th,
-#hinnasto2 td {
-  border: 1px solid #2c2a2a;
-  padding: 8px;
-  text-align: left;
-}
-
-#hinnasto3 {
-  font-size: 20px;
-  margin-left: 10px;
-  margin-top: 10px;
+  font-size: xx-large;
+  padding: 2%;
+  text-decoration: none;
 }
 
 #saapuminen {
-  margin-bottom: 10px;
+  padding-top: 2%;
 }
 
 #saapuminen h2 {
   text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-family: "Georgia", serif;
 }
 
-#saapuminen2 {
+@media (max-width: 768px) {
+  #saapuminen h2 {
+    padding-top: 10%;
+  }
+}
+
+#saapuminen p {
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #saapuminen p {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+#sijainti {
+  padding-top: 2%;
+}
+
+@media (max-width: 768px) {
+  #sijainti {
+    flex-direction: column;
+    padding-top: 0%;
+  }
+}
+
+#sijainti p {
+  color: white;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-family: "Arial", sans-serif;
+  font-size: larger;
+}
+
+@media (max-width: 768px) {
+  #sijainti p {
+    padding-top: 0%;
+    padding-left: 5%;
+  }
+}
+
+#kulkuneuvo {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-top: 3%;
+}
+
+@media (max-width: 768px) {
+  #kulkuneuvo {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0%;
+  }
+}
+
+#auto {
+  padding-right: 10%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #auto {
+    padding-right: 0%;
+    width: 100%;
+  }
+
+  #auto h4 {
+    font-size: 5vw;
+  }
+}
+
+#auto h4 {
+  text-align: center;
+  color: white;
+  font-family: "Georgia", serif;
+}
+
+#auto2 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #auto2 {
+    width: 100%;
+    padding-top: 5%;
+  }
+}
+
+#auto2 img {
+  height: 70%;
+  width: 100%;
+}
+
+.loppu {
+  color: white;
+  font-family: "Arial", sans-serif;
+  padding-left: 2%;
+  padding-bottom: 5%;
+  font-size: larger;
+}
+
+@media (max-width: 768px) {
+  .loppu {
+    padding-top: 5%;
+
+    padding-left: 5%;
+  }
+}
+
+#arvonta {
   display: flex;
   justify-content: center;
 }
 
-#yhteystiedot h2 {
+#arvonta img {
+  width: 50%;
+}
+
+.yhteystiedot {
   text-align: center;
+  color: white;
+}
+
+.yhteystiedot h2 {
+  font-family: "Georgia", serif;
+}
+
+.yhteystiedot p {
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .yhteystiedot {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
 }
 
 #banneri {
   background-color: black;
   color: white;
-  height: 250px;
+
   display: flex;
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  #banneri {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+  }
+}
+
 #kuvabanneri {
-  width: 30%;
-  padding: 20px;
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #kuvabanneri {
+    width: 100%;
+    padding: 0%;
+  }
+}
+
+#kuvabanneri2 {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  padding-right: 2%;
+}
+
+@media (max-width: 768px) {
+  #kuvabanneri2 {
+    width: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
 }
 
 #imgbannerivasen {
-  width: 300px;
-  padding-top: 45px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #imgbannerivasen {
+    padding-left: 2%;
+  }
 }
 
 #imgbannerioikea {
-  width: 300px;
-  padding-top: 60px;
-  padding-right: 30px;
+  width: 100%;
 }
 
 #tekstibanneri {
+  padding-top: 2%;
   text-align: center;
-  padding: 20px 0;
-  width: 40%;
+  width: 33%;
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #tekstibanneri {
+    padding-top: 0%;
+    width: 100%;
+  }
 }

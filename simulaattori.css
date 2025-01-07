@@ -1,0 +1,317 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav {
+  position: fixed; /*Palkki näkyy koko ajan */
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #333; /* Tummanharmaa taustaväri */
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; /* Tämä keskittää linkit */
+  flex-grow: 1; /* Varmistetaan, että tämä elementti täyttää käytettävissä olevan tilan */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Asettaa listan elementit vierekkäin */
+  justify-content: center; /* Keskittää elementit vaakasuunnassa */
+  align-items: center; /* Keskittää elementit pystysuunnassa */
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+/* Linkkien tyyli */
+nav ul li a {
+  display: block;
+  color: white; /* Valkoinen tekstiväri */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Linkkien hover-efekti */
+nav ul li a:hover {
+  background-color: #111; /* Tummempi harmaa taustaväri hover-tilassa */
+}
+
+.social-media-links {
+  margin-left: auto; /* Työntää sosiaalisen median linkit oikeaan reunaan */
+  margin-right: 20px; /* Lisää 20 pikselin väli oikeaan reunaan */
+  display: flex;
+  align-items: center;
+}
+
+.social-media-links a img {
+  width: 30px; /* Säädä logojen kokoa */
+  margin-left: 10px; /* Lisää väliä logojen välille */
+}
+
+.hamburger-menu {
+  display: none; /* Piilotetaan oletusarvoisesti */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px; /* Hampurilaisvalikon korkeus */
+  width: 35px; /* Hampurilaisvalikon leveys */
+  align-items: center;
+}
+
+.hamburger-menu div {
+  background-color: white; /* Viivojen väri */
+  height: 3px; /* Viivojen korkeus */
+  width: 100%; /* Viivojen leveys */
+  margin: 2px 0; /* Viivojen väli */
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Näytetään hampurilaisvalikko */
+    padding-left: 10px;
+  }
+
+  .nav-links {
+    display: none; /* Piilota muut navigointilinkit */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: baseline;
+    padding-top: 240px;
+  }
+
+  nav ul li {
+    display: block;
+  }
+}
+
+/* Muut tyylit, kuten olet jo määritellyt */
+nav ul li a {
+  display: block;
+  color: white; /* Valkoinen tekstiväri */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111; /* Tummempi harmaa taustaväri hover-tilassa */
+}
+
+.social-media-links {
+  margin-left: auto; /* Työntää sosiaalisen median linkit oikeaan reunaan */
+  margin-right: 20px; /* Lisää 20 pikselin väli oikeaan reunaan */
+  display: flex;
+  align-items: center;
+}
+
+.social-media-links a img {
+  width: 30px; /* Säädä logojen kokoa */
+  margin-left: 10px; /* Lisää väliä logojen välille */
+  height: 30px;
+}
+
+.taustavari {
+  background-color: #212121;
+}
+
+.tausta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#otsikko {
+  text-align: center;
+  color: white;
+  font-size: xxx-large;
+  font-family: "Georgia", serif;
+}
+
+.kuva {
+  width: 100%;
+  height: auto;
+  padding-top: 3%;
+}
+
+@media (max-width: 768px) {
+  .kuva {
+    padding-top: 13%;
+  }
+}
+
+.vaaka {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .vaaka {
+    flex-direction: column;
+    padding-top: 10%;
+  }
+}
+
+.vaaka2 {
+  width: 50%;
+  padding-right: 3%;
+}
+
+@media (max-width: 768px) {
+  .vaaka2 {
+    width: 100%;
+    padding-right: 0%;
+  }
+}
+
+.alku {
+  color: white;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-family: "Arial", sans-serif;
+  font-size: x-large;
+}
+
+@media (max-width: 768px) {
+  .alku {
+    padding-left: 5%;
+  }
+}
+
+.kuva1 {
+  width: 100%;
+}
+
+.teksti1 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: x-large;
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .teksti1 {
+    width: 90%;
+    padding-top: 5%;
+    text-align: center;
+    padding-left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tekstit {
+    padding-top: 10%;
+  }
+}
+
+.teksti {
+  color: white;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 3%;
+  font-size: x-large;
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .teksti {
+    text-align: center;
+    padding-bottom: 5%;
+  }
+}
+
+#banneri {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  #banneri {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+  }
+}
+
+#kuvabanneri {
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #kuvabanneri {
+    width: 100%;
+    padding: 0%;
+  }
+}
+
+#kuvabanneri2 {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  padding-right: 2%;
+}
+
+@media (max-width: 768px) {
+  #kuvabanneri2 {
+    width: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+}
+
+#imgbannerivasen {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #imgbannerivasen {
+    padding-left: 2%;
+  }
+}
+
+#imgbannerioikea {
+  width: 100%;
+}
+
+#tekstibanneri {
+  padding-top: 2%;
+  text-align: center;
+  width: 33%;
+  font-family: "Arial", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #tekstibanneri {
+    padding-top: 0%;
+    width: 100%;
+  }
+}

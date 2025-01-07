@@ -1,0 +1,66 @@
+<div id="hinnasto">
+        <h2>Hinnasto</h2>
+        <div id="hinnasto1">
+          <table>
+            <tr>
+              <th>Päivä</th>
+              <th>Aika</th>
+              <th>Hinta/tunti</th>
+            </tr>
+            <tr>
+              <td>Ma-To</td>
+              <td>07-22</td>
+              <td>25€</td>
+            </tr>
+            <tr>
+              <td>Pe</td>
+              <td>07-15</td>
+              <td>25€</td>
+            </tr>
+            <tr>
+              <td>Pe</td>
+              <td>16-22</td>
+              <td>37€</td>
+            </tr>
+            <tr>
+              <td>La-Su</td>
+              <td>07-22</td>
+              <td>37€</td>
+            </tr>
+            <tr>
+              <td>Ma-Su</td>
+              <td>23-07</td>
+              <td>10€</td>
+            </tr>
+          </table>
+        </div>
+        <h2>Varaa toinen tunti edullisemmin</h2>
+        <div id="hinnasto2">
+          <table>
+            <tr>
+              <th>Päivä</th>
+              <th>Aika</th>
+              <th>Toinen tunti</th>
+            </tr>
+            <tr>
+              <td>Ma-To</td>
+              <td>07-23</td>
+              <td>20€</td>
+            </tr>
+            <tr>
+              <td>Pe</td>
+              <td>16-22</td>
+              <td>28€</td>
+            </tr>
+            <tr>
+              <td>La-Su</td>
+              <td>07-23</td>
+              <td>28€</td>
+            </tr>
+          </table>
+        </div>
+        <div id="hinnasto3">
+          Opiskelijat: Ma-to, 20€. Lunasta opiskelijakoodisi Slice.fi
+          mobiiliopiskelijakortista.
+        </div>
+      </div>
